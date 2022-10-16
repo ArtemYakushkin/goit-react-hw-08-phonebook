@@ -8,6 +8,6 @@ export const PrivateRoute = ({ children }) => {
   if (!isLogin) {
     return <Navigate to="/login" />;
   }
-  //   return <Outlet />;
+
   return children;
 };

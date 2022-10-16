@@ -30,21 +30,21 @@ export function RegisterForm({ onData }) {
     <Container component="div" maxWidth="xs">
       <Box
         sx={{
-          marginTop: 8,
+          marginTop: 4,
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
           backgroundColor: 'white',
           padding: '20px',
           boxShadow: ' rgb(33 33 33) 0px 2px 10px 1px',
+          borderRadius: '10px',
         }}
       >
-        <Typography
-          variant="h4"
-          style={{ fontFamily: 'Caveat', fontWeight: '600' }}
-        >
+
+        <Typography variant="h3">
           Sign Up
         </Typography>
+
         <Box component="form" onSubmit={handleSubmit} sx={{ mt: 1 }}>
           <TextField
             margin="normal"
@@ -87,7 +87,7 @@ export function RegisterForm({ onData }) {
             type="submit"
             fullWidth
             variant="contained"
-            sx={{ mt: 3, mb: 2, color: '#0f1111', background: '#008296' }}
+            sx={{ mt: 3, mb: 2, color: '#ffffff', background: '#ffa200' }}
           >
             Sign Up
           </Button>

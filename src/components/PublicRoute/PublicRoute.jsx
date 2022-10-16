@@ -8,13 +8,6 @@ export const PublicRoute = ({ children }) => {
   if (isLogin) {
     return <Navigate to="/contacts" />;
   }
-  //   return <Outlet />;
+  
   return children;
 };
-
-// export const PublicRoute = ({ children, restricted = false, to = '/' }) => {
-//   const isLogin = useSelector(isAuth);
-//   const shouldRedirect = isLogin && restricted;
-
-//   return !shouldRedirect ? children : <Navigate to={to} replace />;
-// };

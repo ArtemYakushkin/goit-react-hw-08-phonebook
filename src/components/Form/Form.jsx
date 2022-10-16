@@ -1,5 +1,5 @@
 import { useState } from 'react';
-// import { Field, ContainerForm, BtnDisabled } from './Form.styled';
+import { FormDesign, LabelDesign, InputDesign, AddBtn } from './Form.styled';
 
 export function Form({ onData }) {
   const initialState = {
@@ -25,10 +25,10 @@ export function Form({ onData }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
+    <FormDesign onSubmit={handleSubmit}>
+      <LabelDesign>
         Name
-        <input
+        <InputDesign
           type="text"
           name="name"
           value={name}
@@ -38,10 +38,10 @@ export function Form({ onData }) {
           placeholder="Enter name..."
           onChange={handleChange}
         />
-      </label>
-      <label>
-        Phone number
-        <input
+      </LabelDesign>
+      <LabelDesign>
+        Number
+        <InputDesign
           type="tel"
           name="number"
           value={number}
@@ -51,10 +51,10 @@ export function Form({ onData }) {
           placeholder="Enter number..."
           onChange={handleChange}
         />
-      </label>
-      <button type="submit" disabled={!name || !number}>
+      </LabelDesign>
+      <AddBtn type="submit" disabled={!name || !number}>
         Add contact
-      </button>
-    </form>
+      </AddBtn>
+    </FormDesign>
   );
 }

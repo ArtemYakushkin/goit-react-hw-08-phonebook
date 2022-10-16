@@ -1,19 +1,19 @@
 import PropTypes from 'prop-types';
-// import { Field } from './Filter.styled';
+import { FilterLabel, FilterInput } from './Filter.styled';
 
 export const Filter = ({ value, onChangeFilter, theme }) => {
 
   return (
-    <label style={{ fontSize: '22px' }}>
+    <FilterLabel>
       Search contacts:
-      <input
+      <FilterInput
         type="text"
         value={value}
         onChange={onChangeFilter}
         placeholder="Enter contact..."
         theme={theme}
       />
-    </label>
+    </FilterLabel>
   );
 };
 

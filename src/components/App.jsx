@@ -7,6 +7,7 @@ import { PublicRoute } from './PublicRoute/PublicRoute';
 import { useDispatch } from 'react-redux';
 import { current } from 'redux/auth/authThunk';
 import { NotFoundPage } from '../pages/NotFoundPage/NotFoundPage';
+import { Container } from './App.styled';
 
 const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
 const ContactsPage = lazy(() => import('../pages/ContactsPage/ContactsPage'));
@@ -21,7 +22,7 @@ export const App = () => {
   }, [dispatch]);
 
   return (
-    <>
+    <Container>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Navigate to="home"></Navigate>} />
@@ -56,6 +57,6 @@ export const App = () => {
       </Routes>
 
       <Toaster position="top-center" reverseOrder={false} />
-    </>
+    </Container>
   );
 };

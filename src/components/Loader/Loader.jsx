@@ -1,5 +1,4 @@
 import { RotatingLines } from 'react-loader-spinner';
-// import { WrapperLoader } from './Loader.styled';
 
 const sizes = {
   sm: 40,
